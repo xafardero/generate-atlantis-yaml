@@ -27,10 +27,7 @@ find . -type f -name "*.tfvars" | while read -r file; do
   name=${filename%.*}
   # Get the name of the project by replacing / for -
   project="${path_without_dots//\//-}"
-  
-  # Write the path and filename separated by a space to the output file
-  #echo "$dir_path $filename" >> "$output_file"
-
+ 
   echo "  - name: $project-$name" >> "$output_file"
   echo "    autoplan:" >> "$output_file"
   echo "      enabled: true" >> "$output_file"
