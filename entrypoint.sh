@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "PWD"
+pwd
+
+echo "ls"
 ls -lash
 
 echo "Finding all tfvars in the project"
