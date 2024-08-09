@@ -1,15 +1,8 @@
 #!/bin/bash
 
-echo "PWD"
-pwd
-
-echo "ls"
-ls -lash
-
 echo "Finding all tfvars in the project"
 # Find all tfvars in all folders
 find . -type f -name "*.tfvars"
-echo "Finding all tfvars in the project"
 
 # Output file
 output_file="atlantis.yaml"
@@ -49,6 +42,5 @@ find . -type f -name "*.tfvars" | while read -r file; do
 
 done
 
-# Notify the user
-echo "List of .tfvars files with paths has been saved to $output_file"
+# Check the outputile
 cat $output_file
