@@ -1,0 +1,6 @@
+name: 'Generate Atlantis yaml'
+description: 'Generates the atlantis yaml for you.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  
